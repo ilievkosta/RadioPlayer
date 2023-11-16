@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:title=" "
+        android:icon="@drawable/baseline_menu_24">
+    <menu>
+    <item
+        android:id="@+id/PlayMenu"
+        android:title="Play"
+        app:showAsAction="never"
+        android:icon="@drawable/baseline_play_arrow_24"
+    />
+        <item
+            android:id="@+id/FavMenu"
+            android:title="Fav"
+            app:showAsAction="never"
+            android:icon="@drawable/baseline_favorite_24"
+            />
+        <item
+            android:id="@+id/AboutMenu"
+            android:title="Info"
+            app:showAsAction="never"
+            android:icon="@drawable/baseline_info_24"
+            />
+        <item
+            android:id="@+id/ExitMenu"
+            android:title="Exit"
+            app:showAsAction="never"
+            android:icon="@drawable/baseline_exit_to_app_24"
+            />
+
+    </menu>
+
+    </item>
+
+</menu>
