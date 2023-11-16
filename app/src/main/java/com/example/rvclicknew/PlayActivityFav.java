@@ -73,10 +73,7 @@ public class PlayActivityFav extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
-
     }
-
-
 
     private void setOnClickListener() {
         listenerlong= new recycleAdapter.RecycleViewOnLongClickListener() {
@@ -84,7 +81,7 @@ public class PlayActivityFav extends AppCompatActivity {
             public void onLongClick(View v, int position) {
                 Radio RadioDel=new Radio(radiosList.get(position).get_id(),radiosList.get(position).getRadioName(),radiosList.get(position).getRadioUrl(),radiosList.get(position).getRadioPic());
                 db.deleteContact(RadioDel);
-                Log.d(TAG, "Some logging");
+
                 recreate();
             }
         };

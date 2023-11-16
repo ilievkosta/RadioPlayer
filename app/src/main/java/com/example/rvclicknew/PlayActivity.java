@@ -78,7 +78,7 @@ public class PlayActivity extends AppCompatActivity {
 
         String radioName = "";
         String radioUrl = "";
-        String radioImg= "";
+        String radioImg= "https://live.staticflickr.com/233/3263893341_dd2e25292f_b.jpg";
         Bundle extras = getIntent().getExtras();
         if (extras !=null){
             radioName=extras.getString("radioName");
@@ -87,6 +87,12 @@ public class PlayActivity extends AppCompatActivity {
             ImageView ivBasicImage = findViewById(R.id.imageView);
             Picasso.get().load(radioImg).into(ivBasicImage);
 
+        }
+        else{
+            ImageView ivBasicImage = findViewById(R.id.imageView);
+            Picasso.get().load(radioImg).into(ivBasicImage);
+            playBtn.setVisibility(View.GONE);
+            likeBtn.setVisibility(View.GONE);
         }
 
 

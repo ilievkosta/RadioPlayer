@@ -1,9 +1,11 @@
-package test.database.sqltest;
+package com.example.rvclicknew;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,8 +73,8 @@ public class DatabaseHandler extends SQLiteOpenHelper{
     }
 
     // code to get all contacts in a list view
-    public List<Radio> getAllContacts() {
-        List<Radio> contactList = new ArrayList<Radio>();
+    public List<Radio> getAllRadios() {
+        List<Radio> radioList1 = new ArrayList<Radio>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_RADIOS;
 
@@ -82,19 +84,19 @@ public class DatabaseHandler extends SQLiteOpenHelper{
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Radio contact = new Radio();
-                contact.set_id(Integer.parseInt(cursor.getString(0)));
-                contact.setRadioName(cursor.getString(1));
-                contact.setRadioUrl(cursor.getString(2));
-                contact.setRadioPic(cursor.getString(3));
+                Radio radios = new Radio();
+                radios.set_id(Integer.parseInt(cursor.getString(0)));
+                radios.setRadioName(cursor.getString(1));
+                radios.setRadioUrl(cursor.getString(2));
+                radios.setRadioPic(cursor.getString(3));
 
-                // Adding contact to list
-                contactList.add(contact);
+                // Adding radio to list
+                radioList1.add(radios);
             } while (cursor.moveToNext());
         }
 
         // return contact list
-        return contactList;
+        return radioList1;
     }
 
     // code to update the single contact
